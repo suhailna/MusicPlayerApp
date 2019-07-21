@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button playBytton, pauseButton;
+    private Button playBytton, pauseButton, stopButton;
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         playBytton = (Button) findViewById(R.id.playButton);
         pauseButton = (Button) findViewById(R.id.pauseButton);
+        stopButton = (Button) findViewById(R.id.stopButton);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.song1);
 
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Pausing sound", Toast.LENGTH_SHORT).show();
                 mediaPlayer.pause();
+            }
+        });
+
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Stopping sound", Toast.LENGTH_SHORT).show();
+                mediaPlayer.stop();
             }
         });
 
