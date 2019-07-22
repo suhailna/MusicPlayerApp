@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mediaPlayer) {
-                    Toast.makeText(MainActivity.this,"I'm done",Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(MainActivity.this,"I'm done",Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Pausing sound", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), "Pausing sound", Toast.LENGTH_SHORT).show();
                 mediaPlayer.pause();
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Stopping sound", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), "Stopping sound", Toast.LENGTH_SHORT).show();
                 mediaPlayer.stop();
             }
         });
